@@ -149,64 +149,64 @@ function addSvg(){
     currentSvg = "";
     if(class1.included){
         currentSvg += class1Box;
-        if(class1.connections.To2){
+        if(class2.included && class1.connections.To2){
             currentSvg += line12 + arrow1To2;
         }
-        if(class1.connections.To3){
+        if(class3.included && class1.connections.To3){
             currentSvg += line13 + arrow1To3;
         }
-        if(class1.connections.To4){
+        if(class4.included && class1.connections.To4){
             currentSvg += line14 + arrow1To4;
         }
     }
     if(class2.included){
         currentSvg += class2Box;
-        if(class2.connections.To1){
+        if(class1.included && class2.connections.To1){
             if(!class1.connections.To2){
                 currentSvg += line12;
             }
             currentSvg += arrow2To1;
         }
-        if(class2.connections.To3){
+        if(class3.included && class2.connections.To3){
             currentSvg += line23 + arrow2To3;
         }
-        if(class2.connections.To4){
+        if(class4.included && class2.connections.To4){
             currentSvg += line24 + arrow2To4;
         }
     }
     if(class3.included){
         currentSvg += class3Box;
-        if(class3.connections.To1){
+        if(class1.included && class3.connections.To1){
             if(!class1.connections.To3){
                 currentSvg += line13;
             }
             currentSvg += arrow3To1;
         }
-        if(class3.connections.To2){
+        if(class2.included && class3.connections.To2){
             if(!class2.connections.To3){
                 currentSvg += line23;
             }
             currentSvg += arrow3To2;
         }
-        if(class3.connections.To4){
+        if(class4.included && class3.connections.To4){
             currentSvg += line34 + arrow3To4;
         }
     }
     if(class4.included){
         currentSvg += class4Box;
-        if(class4.connections.To1){
+        if(class1.included && class4.connections.To1){
             if(!class1.connections.To4){
                 currentSvg += line14;
             }
             currentSvg += arrow4To1;
         }
-        if(class4.connections.To3){
+        if(class3.included && class4.connections.To3){
             if(!class3.connections.To4){
                 currentSvg += line34;
             }
             currentSvg += arrow4To3;
         }
-        if(class4.connections.To2){
+        if(class2.included && class4.connections.To2){
             if(!class2.connections.To4){
                 currentSvg += line24;
             }
